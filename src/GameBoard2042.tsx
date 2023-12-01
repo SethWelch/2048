@@ -406,9 +406,9 @@ export const GameBoard2042 = () => {
           alignItems: "center",
         }}
       >
-        <label style={{ fontSize: 24, fontWeight: 700 }}>2048</label>
+        <label style={{ fontSize: 40, fontWeight: 700 }}>2048</label>
         <div>
-          <label style={{ fontSize: 14, fontWeight: 700 }}>
+          <label style={{ fontSize: 32, fontWeight: 700 }}>
             Score: {score}
           </label>
         </div>
@@ -417,13 +417,15 @@ export const GameBoard2042 = () => {
       {board.length > 0 ? (
         <div
           style={{
-            height: 230,
-            width: 228,
+            height: 430,
+            width: 440,
             display: "grid",
             justifyContent: "center",
             alignItems: "center",
             background: "lightgrey",
             position: "relative",
+            paddingTop: 6,
+            paddingBottom: 6,
           }}
         >
           {gameOver && (
@@ -439,14 +441,15 @@ export const GameBoard2042 = () => {
                 background: "rgba(47, 79, 79, 0.8)",
               }}
             >
-              <label style={{ fontWeight: 800, fontSize: 20 }}>
+              <label style={{ fontWeight: 800, fontSize: 40 }}>
                 {checkForNumber(2048) ? "You Win!" : "Game Over"}
               </label>
               <button
                 onClick={restartGame}
                 style={{
                   width: "fit-content",
-                  fontSize: 12,
+                  fontSize: 28,
+                  fontWeight: 700,
                   background: "black",
                 }}
               >
@@ -462,8 +465,6 @@ export const GameBoard2042 = () => {
                 style={{
                   display: "flex",
                   gap: 6,
-                  marginTop: 3,
-                  marginBottom: 3,
                 }}
               >
                 {r.map((c, cIndex) => {
@@ -471,15 +472,15 @@ export const GameBoard2042 = () => {
                     <div
                       key={"Cell-" + cIndex}
                       style={{
-                        width: 50,
-                        height: 50,
+                        width: 100,
+                        height: 100,
                         background: getColor(c),
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                       }}
                     >
-                      <label style={{ fontSize: 18, fontWeight: 700 }}>
+                      <label style={{ fontSize: 36, fontWeight: 800 }}>
                         {c > 0 ? c : ""}
                       </label>
                     </div>
