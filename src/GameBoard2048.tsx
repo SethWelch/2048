@@ -14,7 +14,7 @@ type color =
   | "blueviolet"
   | "purple";
 
-export const GameBoard2042 = () => {
+export const GameBoard2048 = () => {
   const [board, setBoard] = React.useState<number[][]>([]);
   const [score, setScore] = React.useState<number>(0);
   const [gameOver, setGameOver] = React.useState<boolean>(false);

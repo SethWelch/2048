@@ -1,10 +1,10 @@
 import "./App.css";
-import { GameBoard2042 } from "./GameBoard2042";
+import { GameBoard2048 } from "./GameBoard2048";
 
 function App() {
   return (
     <div>
-      <GameBoard2042 />
+      <GameBoard2048 />
     </div>
   );
 }
